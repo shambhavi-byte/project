@@ -114,7 +114,7 @@ POST /subscriptions/:channelId
 # 📦 Installation
 
 ```
-git clone https://github.com/yourusername/youtube-backend
+git clone https://github.com/shambhavi-byte/youtube-backend
 cd youtube-backend
 npm install
 npm run dev
