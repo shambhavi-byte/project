@@ -1,141 +1,144 @@
-# 🎬 YouTube Backend API (Node.js + Express + MongoDB)
+# 🎬 StreamSphere API (Node.js + Express + MongoDB)
 
-A production-style backend API inspired by YouTube, built with **Node.js, Express, MongoDB, and Cloudinary**.
-This project implements authentication, video management, playlists, subscriptions, likes, comments, and dashboard analytics.
+A production-grade backend API for a modern video-sharing and social media platform, combining YouTube-style video streaming with tweet/community post functionality.
+
+Built using Node.js, Express, MongoDB, and Cloudinary, this project demonstrates scalable backend design, secure authentication, and real-world system architecture.
 
 ---
 
-# 🚀 Features
+# 🚀 Core Features
 
-* User Authentication (JWT + Refresh Tokens)
-* Video Upload with Cloudinary
-* Comments System
-* Likes System
-* Playlist Management
-* Channel Subscriptions
-* Watch History
-* Dashboard Analytics
-* Secure API using Middleware
+## 🔐 Authentication & Security
+- JWT-based authentication (Access + Refresh Tokens)
+- Secure route protection using middleware
+
+## 🎥 Video Platform
+- Video upload & management (Cloudinary integration)
+- Watch history tracking
+- Channel profile system
+
+## 💬 Social Features
+- Comments system
+- Likes system
+- Subscriptions (follow channels)
+- Tweet-style community posts
+
+## 📊 Dashboard & Analytics
+- Total videos, views, likes, subscribers
+- Creator dashboard insights
+
+## ⚙️ Backend Architecture
+- Scalable MVC architecture
+- Clean modular structure
+- RESTful API design
 
 ---
 
 # 🛠 Tech Stack
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
-* Multer
-* Cloudinary
-* REST APIs
+- Backend: Node.js, Express.js  
+- Database: MongoDB, Mongoose  
+- Authentication: JWT (Access + Refresh Tokens)  
+- File Uploads: Multer  
+- Cloud Storage: Cloudinary  
+- Architecture: MVC Pattern  
+- Version Control: Git & GitHub  
 
 ---
 
-# 📂 Project Architecture
+# 📂 Project Structure
 
-MVC Architecture
-
-controllers → Business logic
-models → MongoDB schema
-routes → API endpoints
-middlewares → authentication & uploads
-utils → reusable utilities
+controllers/   → Business logic  
+models/        → Database schemas  
+routes/        → API endpoints  
+middlewares/   → Auth & file handling  
+utils/         → Helper functions  
 
 ---
 
 # 🔑 Authentication Flow
 
-1. User registers
-2. User logs in
-3. Access token + refresh token generated
-4. Access token used for protected routes
-5. Refresh token used to generate new access tokens
+1. User registers  
+2. User logs in  
+3. Access token + Refresh token generated  
+4. Access token used for protected APIs  
+5. Refresh token used to regenerate access token  
 
 ---
 
 # 📡 API Base URL
 
-```
 http://localhost:8000/api/v1
-```
 
 ---
 
 # ⚙️ Environment Variables
 
-Create `.env` file
+Create a `.env` file:
 
-```
-PORT=8000
-MONGODB_URI=your_mongodb_connection
-ACCESS_TOKEN_SECRET=your_secret
-REFRESH_TOKEN_SECRET=your_secret
+PORT=8000  
+MONGODB_URI=your_mongodb_connection  
 
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
+ACCESS_TOKEN_SECRET=your_secret  
+REFRESH_TOKEN_SECRET=your_secret  
 
-CORS_ORIGIN=http://localhost:3000
-```
+CLOUDINARY_CLOUD_NAME=  
+CLOUDINARY_API_KEY=  
+CLOUDINARY_API_SECRET=  
+
+CORS_ORIGIN=http://localhost:3000  
 
 ---
 
 # 📌 Major API Endpoints
 
-Users
-POST /users/register
-POST /users/login
-POST /users/logout
+## 👤 Users
+POST /users/register  
+POST /users/login  
+POST /users/logout  
 
-Videos
-POST /videos/publish
-GET /videos
-GET /videos/:id
+## 🎥 Videos
+POST /videos/publish  
+GET /videos  
+GET /videos/:id  
 
-Comments
-POST /comments/:videoId
-DELETE /comments/:commentId
+## 💬 Comments
+POST /comments/:videoId  
+DELETE /comments/:commentId  
 
-Subscriptions
-POST /subscriptions/:channelId
+## 🔔 Subscriptions
+POST /subscriptions/:channelId  
 
 ---
 
 # 📊 Dashboard Analytics
 
-* Total videos
-* Total views
-* Total subscribers
-* Total likes
+- Total Videos  
+- Total Views  
+- Total Subscribers  
+- Total Likes  
 
 ---
 
-# 📦 Installation
+# 📦 Installation & Setup
 
-```
-git clone https://github.com/shambhavi-byte/youtube-backend
-cd youtube-backend
-npm install
-npm run dev
-```
+git clone https://github.com/shambhavi-byte/streamsphere-api  
+cd streamsphere-api  
+npm install  
+npm run dev  
 
-Server will run on:
-
-```
-http://localhost:8000
-```
+Server runs at:  
+http://localhost:8000  
 
 ---
 
-# 🧠 Learning Outcomes
+# 🧠 Key Learnings
 
-* REST API Design
-* Authentication using JWT
-* File Upload Handling
-* Cloud Storage Integration
-* MongoDB Aggregation
-* Backend Architecture
+- Designing scalable REST APIs  
+- Implementing secure JWT authentication  
+- Handling media uploads & cloud storage  
+- Structuring backend using MVC architecture  
+- Working with MongoDB aggregation  
 
 ---
 
